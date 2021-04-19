@@ -60,7 +60,7 @@ $clientesData = $model->GetClientes(null);
                 <tr>
                   <td><?php echo $value["nome"];?></td>
                   <td><?php echo $value["cnpj"];?></td>
-                  <td><?php echo $value["status"];?></td>
+                  <td><?php echo $value["status1"];?></td>
                   <td><?php echo $value["registro"];?></td>
                   <td>
                   <button onclick="editar('clientes',<?php echo $value['idcliente'];?>)" class="btn btn-primary">Editar</button>

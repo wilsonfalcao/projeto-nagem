@@ -63,7 +63,7 @@ class databaseModel {
     // Utilizando a extensão MySQLI para funções básica de consulta e registros
     protected function get_clientes(){
         try{
-            $result = $this->link->prepare("select id_clientes, nome, cnpj, status, registro from clientes;");
+            $result = $this->link->prepare("select id_clientes, nome, cnpj, status,if(status=1, 'Ativo', 'Inativo') as status1, registro from clientes;");
             $result->execute();
 
             $rows = [];
@@ -72,6 +72,7 @@ class databaseModel {
                 "nome"=>$row["nome"],
                 "cnpj"=>$row["cnpj"],
                 "status"=>$row["status"],
+                "status1"=>$row["status1"],
                 "registro"=>$row["registro"]]);
             }
             
