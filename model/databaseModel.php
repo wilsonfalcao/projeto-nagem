@@ -179,9 +179,14 @@ class databaseModel {
     protected function insert_clientes($ArrayInsert){
 
         try{
-            $query = "INSERT INTO `clientes` (`nome`, `cnpj`, `status`) VALUES 
-                    ('".$ArrayInsert["nome"]."', '".$ArrayInsert["cnpj"]."', '".$ArrayInsert["status"]."');";
-            $response = $this->link->query($query);
+            $query = "INSERT INTO `clientes` (`nome`, `cnpj`, `status`) VALUES (?,?,?);";
+
+            $response = $this->link->prepare($query);
+
+            $response->bind_param('sii', $ArrayInsert["nome"],$ArrayInsert["cnpj"],$ArrayInsert["status"]);
+
+            $response->execute();
+
             if($response->error){
                 throw new Exception();
             }
@@ -196,9 +201,14 @@ class databaseModel {
     protected function insert_contatos($Data){
 
         try{
-            $query = "INSERT INTO `contatos` (`id_cliente`, `nome_contato`, `email_contato`, `cpf`) VALUES 
-            ('".$Data["idcliente"]."','".$Data["nomecontato"]."','".$Data["emailcontato"]."','".$Data["cpfcontato"]."');";
-            $response = $this->link->query($query);
+            $query = "INSERT INTO `contatos` (`id_cliente`, `nome_contato`, `email_contato`, `cpf`) VALUES (?,?,?,?)";
+
+            $response = $this->link->prepare($query);
+
+            $response->bind_param('issi', $Data["idcliente"], $Data["nomecontato"], $Data["emailcontato"], $Data["cpfcontato"]);
+
+            $response->execute();
+
             if($response->error){
                 throw new Exception();
             }
