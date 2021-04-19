@@ -16,5 +16,5 @@ A Nagem comercializa mais de 6 mil itens entre produtos de tecnologia, informát
 
 Desenvolver um CRUD para duas tabelas com emtodos para Incluir, Alterar e Excluir. Listar cadastro em forma de listagem.
 
-[demo01](https://github.com/wilsonfalcao/projeto-nagem/blob/main/images/imagem01.jpg)
-[demo02](https://github.com/wilsonfalcao/projeto-nagem/blob/main/images/imagem02.jpg)
+![demo01](https://github.com/wilsonfalcao/projeto-nagem/blob/main/images/imagem01.jpg)
+![demo02](https://github.com/wilsonfalcao/projeto-nagem/blob/main/images/imagem02.jpg)
