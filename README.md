@@ -14,7 +14,7 @@ A Nagem comercializa mais de 6 mil itens entre produtos de tecnologia, informát
 
 #### Sobre o Desafio
 
-Desenvolver um CRUD para duas tabelas com emtodos para Incluir, Alterar e Excluir. Listar cadastro em forma de listagem.
+Desenvolver um CRUD para duas tabelas como métodos de Incluir, Alterar e Excluir. Listar cadastro em forma de listagem.
 
 #### Imagens
 <table style="width:100%">
